@@ -1,0 +1,169 @@
+.aleph {
+  font-family: "Montserrat", sans-serif;
+  margin: 40px;
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 26px;
+    font-weight: 700;
+  }
+  &__number1 {
+    display: flex;
+    margin-top: 26px;
+    gap: 20px;
+    &__number {
+      font-size: 26px;
+      font-weight: 500;
+    }
+    &__answer {
+      background-image: url(../src/assest/building.webp);
+      background-size: cover;
+      border-radius: 8px;
+
+      &__card {
+        width: 400px;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        padding: 20px;
+        &__title {
+          color: #fff;
+          font-size: 26px;
+          font-weight: 700;
+          text-align: center;
+          transform: translateY(-20px);
+          transition: 3s;
+        }
+        &__sub {
+          color: #fff;
+          font-size: 18px;
+          font-weight: 600;
+          text-align: center;
+          list-style: none;
+          margin: 0 10px;
+          transition: opacity 2s ease-out;
+          opacity: 0;
+          height: 0;
+          overflow: hidden;
+        }
+      }
+      &__card:hover &__card__sub {
+        opacity: 1;
+        height: auto;
+      }
+    }
+  }
+  &__number2 {
+    display: flex;
+    margin-top: 26px;
+    gap: 20px;
+    &__number {
+      font-size: 26px;
+      font-weight: 500;
+    }
+    &__box {
+      width: 500px;
+      background: #000;
+      height: 300px;
+      border-radius: 8px;
+      padding: 20px;
+
+      &__top {
+        color: #fff;
+        cursor: pointer;
+        height: 30px;
+        width: 200px;
+        display: flex;
+        align-items: center;
+      }
+      &__body {
+        width: 200px;
+        height: fit-content;
+        background: #fff;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+
+        &__item {
+          padding: 5px 10px;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          transition: opacity 2s ease-out;
+        }
+        &__item {
+          span:hover {
+            padding-left: 5px;
+            color: #3ca0e7;
+            border-left: 2px solid #3ca0e7;
+            transition: all 0.3s ease;
+            height: fit-content;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  &__number3 {
+    display: flex;
+    margin-top: 26px;
+    gap: 20px;
+    &__number {
+      font-size: 26px;
+      font-weight: 500;
+    }
+    &__table {
+      &__title {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 24px;
+      }
+      &__box {
+        &__item {
+          width: 250px;
+          height: 30px;
+          font-weight: 600;
+          font-size: 18px;
+          display: flex;
+          align-items: center;
+          padding-left: 10px;
+        }
+
+        > div:nth-child(even) {
+          background: #fff;
+        }
+        > div:nth-child(odd) {
+          background: #cccccc;
+        }
+      }
+    }
+  }
+}
+
+.mgb-10 {
+  margin-bottom: 10px;
+}
+.mgt-10 {
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 420px) {
+  .aleph__title {
+    font-size: 20px;
+  }
+  .aleph__number1__answer__card {
+    width: 100%;
+    height: 150px;
+    padding: 0px;
+    &__title {
+      font-size: 20px;
+    }
+    &__sub {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  }
+}
